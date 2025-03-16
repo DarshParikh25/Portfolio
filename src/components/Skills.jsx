@@ -4,6 +4,12 @@ import jsIcon from '../assets/images/skills-icons/js.png'
 import gitIcon from '../assets/images/skills-icons/git.png'
 import cIcon from '../assets/images/skills-icons/C.png'
 import pythonIcon from '../assets/images/skills-icons/python.png'
+import nodejsIcon from '../assets/images/skills-icons/nodejs.png'
+import reactjsIcon from '../assets/images/skills-icons/reactjs.png'
+import tsIcon from '../assets/images/skills-icons/typescript.png'
+import cppIcon from '../assets/images/skills-icons/cpp.png'
+import javaIcon from '../assets/images/skills-icons/java.png'
+import tailwindcssIcon from '../assets/images/skills-icons/tailwindcss.png'
 
 const Skills = () => {
   const skills = [
@@ -41,32 +47,32 @@ const Skills = () => {
     {
       name: "ReactJS",
       percentage: 75,
-      icon: pythonIcon
+      icon: reactjsIcon
     },
     {
       name: "NodeJS",
       percentage: 40,
-      icon: pythonIcon
+      icon: nodejsIcon
     },
     {
       name: "TypeScript",
       percentage: 60,
-      icon: pythonIcon
+      icon: tsIcon
     },
     {
       name: "C++",
       percentage: 50,
-      icon: cIcon
+      icon: cppIcon
     },
     {
       name: "Java",
       percentage: 50,
-      icon: cIcon
+      icon: javaIcon
     },
     {
       name: "TailwindCSS",
       percentage: 90,
-      icon: pythonIcon
+      icon: tailwindcssIcon
     }
   ]
 
