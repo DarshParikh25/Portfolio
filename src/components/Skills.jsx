@@ -79,7 +79,7 @@ const Skills = () => {
   return (
     <section className="bg-col pb-16 pt-10 px-8" id="skills">
       <h2 className="text-4xl font-bold text-center mb-20 mt-8 font-rounded text-blue-400">My Skills</h2>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {skills.map((skill, index) => (
           <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
             <div className="flex items-center gap-4 mb-4">

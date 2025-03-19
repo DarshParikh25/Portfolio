@@ -68,35 +68,35 @@ const Contact = () => {
   }
 
   return (
-    <section className="bg-col py-16 px-8" id="contact">
-      <h2 className="text-4xl font-bold text-center mb-16 font-rounded text-blue-400">Contact Me!</h2>
-      <div className="max-w-6xl mx-auto flex justify-center items-center flex-wrap gap-24">
-        <div className="flex-1 self-center bg-gray-800 max-w-[40%] px-12 py-16 rounded-3xl border border-gray-700">
-          <p className="text-lg mb-12 leading-relaxed">
+    <section className="bg-col py-16 px-4 sm:px-6 lg:px-8 pt-20" id="contact">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-rounded text-blue-400">Contact Me!</h2>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="bg-gray-800 p-6 sm:p-8 lg:p-12 rounded-3xl border border-gray-700">
+          <p className="text-base sm:text-lg mb-8 text-gray-300">
             Hello! Originating from Vadodara, Gujarat, I'm currently pursuing my B.Tech Degree 
             at SRM University in the cultural haven of Chennai, Tamil Nadu. Eager to connect? 
             Drop me a line using the contact details provided below - Let's embark on a journey 
             of connection and exploration together!
           </p>
           <ul className="space-y-4">
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 text-gray-300">
               <span className="font-bold text-blue-400">Location:</span>
               <span>Chennai, TamilNadu</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 text-gray-300">
               <span className="font-bold text-blue-400">Phone No.:</span>
               <span>+91 7990143785</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 text-gray-300">
               <span className="font-bold text-blue-400">Email:</span>
               <span>parikhdarsh121@gmail.com</span>
             </li>
           </ul>
         </div>
-        <div className="flex-1 max-w-[50%]">
+        <div>
           <form ref={form} onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block mb-2 font-semibold">
+              <label htmlFor="name" className="block mb-2 font-semibold text-gray-300">
                 Name:
               </label>
               <input
@@ -106,12 +106,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent transition-colors duration-200 border-gray-300 focus:border-blue-500 focus:outline-none"
+                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent text-gray-300 transition-colors duration-200 border-gray-700 focus:border-blue-500 focus:outline-none"
                 required
               />
             </div>
             <div>
-              <label htmlFor="email" className="block mb-2 font-semibold">
+              <label htmlFor="email" className="block mb-2 font-semibold text-gray-300">
                 Email:
               </label>
               <input
@@ -121,12 +121,12 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent transition-colors duration-200 border-gray-300 focus:border-blue-500 focus:outline-none"
+                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent text-gray-300 transition-colors duration-200 border-gray-700 focus:border-blue-500 focus:outline-none"
                 required
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block mb-2 font-semibold">
+              <label htmlFor="phone" className="block mb-2 font-semibold text-gray-300">
                 Contact No.:
               </label>
               <input
@@ -136,12 +136,12 @@ const Contact = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Your Contact Number"
-                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent transition-colors duration-200 border-gray-300 focus:border-blue-500 focus:outline-none"
+                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent text-gray-300 transition-colors duration-200 border-gray-700 focus:border-blue-500 focus:outline-none"
                 required
               />
             </div>
             <div>
-              <label htmlFor="message" className="block mb-2 font-semibold">
+              <label htmlFor="message" className="block mb-2 font-semibold text-gray-300">
                 Message:
               </label>
               <textarea
@@ -151,7 +151,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Message"
                 rows="5"
-                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent transition-colors duration-200 border-gray-300 focus:border-blue-500 focus:outline-none resize-none"
+                className="w-full px-4 py-2 rounded-lg border-2 bg-transparent text-gray-300 transition-colors duration-200 border-gray-700 focus:border-blue-500 focus:outline-none resize-none"
                 required
               ></textarea>
             </div>

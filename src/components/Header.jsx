@@ -35,49 +35,51 @@ const Header = () => {
     }
 
     return (
-        <header className={`fixed top-0 w-full transition-all duration-500 z-50 
-            ${isScrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg shadow-gray-900/20' : 'bg-transparent'}`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
-                    <div className="profile z-50">
-                        <a 
-                            href="#" 
-                            className="font-dancing text-4xl text-blue-400 hover:text-blue-300 transition-all duration-300 hover:scale-110 inline-block"
+        <>
+            <header className={`fixed top-0 w-full transition-all duration-500 z-[100] 
+                ${isScrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg shadow-gray-900/20' : 'bg-transparent'}`}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center h-20">
+                        <div className="profile">
+                            <a 
+                                href="#" 
+                                className="font-dancing text-4xl text-blue-400 hover:text-blue-300 transition-all duration-300 hover:scale-110 inline-block"
+                            >
+                                Darsh.
+                            </a>
+                        </div>
+                        {/* Desktop Navigation */}
+                        <nav className="hidden lg:block">
+                            <ul className="flex gap-12">
+                                {navItems.map((item) => (
+                                    <li key={item}>
+                                        <a
+                                            href={`#${item.toLowerCase()}`}
+                                            onClick={() => handleNavClick(item)}
+                                            className={`font-rounded relative py-2 px-1 transition-all duration-300 text-lg ${activeSection === item.toLowerCase() ? 'text-blue-400' : 'text-gray-300 hover:text-blue-400' } after:content-[''] after:absolute after:left-0 after:bottom-0  after:w-full after:h-0.5 after:bg-blue-400  after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300 ${activeSection === item.toLowerCase() ? 'after:scale-x-100' : ''} hover:after:scale-x-100`}
+                                        >
+                                            {item}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                        {/* Mobile Menu Button */}
+                        <button 
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="lg:hidden text-gray-300 hover:text-blue-400 transition-colors p-2 focus:outline-none"
                         >
-                            Darsh.
-                        </a>
+                            {isMobileMenuOpen ? (
+                                <X className="h-6 w-6" />
+                            ) : (
+                                <Menu className="h-6 w-6" />
+                            )}
+                        </button>
                     </div>
-                    {/* Desktop Navigation */}
-                    <nav className="hidden lg:block">
-                        <ul className="flex gap-12">
-                            {navItems.map((item) => (
-                                <li key={item}>
-                                    <a
-                                        href={`#${item.toLowerCase()}`}
-                                        onClick={() => handleNavClick(item)}
-                                        className={`font-rounded relative py-2 px-1 transition-all duration-300 text-lg ${activeSection === item.toLowerCase() ? 'text-blue-400' : 'text-gray-300 hover:text-blue-400' } after:content-[''] after:absolute after:left-0 after:bottom-0  after:w-full after:h-0.5 after:bg-blue-400  after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300 ${activeSection === item.toLowerCase() ? 'after:scale-x-100' : ''} hover:after:scale-x-100`}
-                                    >
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                    {/* Mobile Menu Button */}
-                    <button 
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="lg:hidden z-50 text-gray-300 hover:text-blue-400 transition-colors p-2 focus:outline-none"
-                    >
-                        {isMobileMenuOpen ? (
-                            <X className="h-6 w-6" />
-                        ) : (
-                            <Menu className="h-6 w-6" />
-                        )}
-                    </button>
                 </div>
-            </div>
+            </header>
             {/* Mobile Navigation */}
-            <div className={`lg:hidden fixed inset-0 bg-gray-900/98 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`lg:hidden fixed inset-0 bg-gray-900/50 backdrop-blur-lg transform transition-transform duration-300 ease-in-out z-[90] ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <nav className="h-full flex items-center justify-center">
                     <ul className="space-y-8">
                         {navItems.map((item) => (
@@ -99,7 +101,7 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
-        </header>
+        </>
     )
 }
 
